@@ -59,8 +59,8 @@ Este proyecto tiene como objetivo fortalecer la comprensión y aplicación del p
 ---
 
 **Luis Calabro**  
-Fecha de inicio: [fecha]  
-Tiempo invertido: [horas]  
+Fecha de inicio: 11/08/2025  
+Tiempo invertido: 1  
 
 ---
 
