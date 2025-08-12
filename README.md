@@ -1,61 +1,77 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Proyecto: ejercicio-mvc-calabro-luis
 
-## About Laravel
+Proyecto práctico para afianzar el patrón MVC usando Laravel.  
+Base de datos personalizada: ejercicio_mvc_calabro_luis
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Qué hemos hecho hasta ahora
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### PARTE 5: ACTIVIDADES DE REFUERZO
 
-## Learning Laravel
+#### 5.1 Ejercicios prácticos realizados
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Ejercicio 1: Agregar funcionalidad de edición**
+  - Agregamos los métodos `edit` y `update` en el controlador `StudentController`.
+  - Creamos la vista `edit.blade.php`.
+  - Añadimos las rutas correspondientes para editar estudiantes.
+  - Implementamos el botón "Editar" en la lista de estudiantes.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Ejercicio 2: Implementar eliminación**
+  - Agregamos el método `destroy` en el controlador.
+  - Creamos una confirmación dinámica usando modal JavaScript para eliminar.
+  - Añadimos el botón "Eliminar" con confirmación en la lista de estudiantes.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## Qué falta hacer
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Ejercicio 3: Añadir campo adicional**
+  - Crear migración para agregar el campo "teléfono" en la tabla estudiantes.
+  - Actualizar el modelo, controlador y vistas para manejar el nuevo campo.
+  - Agregar validación para el campo "teléfono".
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Próximos pasos y reflexiones
 
-## Contributing
+- Completar el Ejercicio 3.
+- Responder preguntas de reflexión sobre MVC y buenas prácticas.
+- Realizar desafío adicional: Gestión de Cursos con CRUD completo y relaciones.
+- Preparar entregables con personalización, capturas, y documento reflexivo.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## Sobre el proyecto
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Este proyecto tiene como objetivo fortalecer la comprensión y aplicación del patrón Modelo-Vista-Controlador (MVC) en Laravel, implementando funcionalidades básicas CRUD con buenas prácticas y separación de responsabilidades.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Documentación y recursos
 
-## License
+- [Documentación oficial Laravel](https://laravel.com/docs)
+- [Laravel Blade Templates](https://laravel.com/docs/blade)
+- [GitHub del proyecto](https://github.com/calabroluis1/ejercicio-mvc-luis-calabro)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+**Luis Calabro**  
+Fecha de inicio: [fecha]  
+Tiempo invertido: [horas]  
+
+---
+
+### Comentarios personales y modificaciones
+
+- Se personalizó el proyecto y base de datos con nombre propio para cumplir criterios.
+- Se implementaron validaciones con mensajes personalizados en español.
+- Se mejoró la experiencia de usuario con modales para confirmación en eliminación.
+- Pendiente agregar mejoras para validación del nuevo campo "teléfono" y nuevo módulo Cursos.
+
+---
+
+*Este README se actualizará conforme avance el proyecto.*
+
