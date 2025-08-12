@@ -13,6 +13,8 @@
 <th>Email</th>
 <th>Edad</th>
 <th>Curso</th>
+
+<th>Telefono</th>
 <th>Acciones</th>
 </tr>
 </thead>
@@ -24,6 +26,7 @@
 <td>{{ $student->email }}</td>
 <td>{{ $student->age }}</td>
 <td>{{ $student->course }}</td>
+<td>{{ $student->phone }}</td>
 <td>
   <div class="action-buttons">
     <a href="{{ route('students.show', $student->id) }}" class="btn btn-verdetalles">Ver Detalles</a>

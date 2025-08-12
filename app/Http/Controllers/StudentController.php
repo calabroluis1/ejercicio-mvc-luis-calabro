@@ -51,7 +51,8 @@ $validatedData = $request->validate([
         Rule::unique('students', 'email')->ignore($id)
     ],
     'age' => 'required|integer|min:16|max:100',
-    'course' => 'required|string'
+    'course' => 'required|string',
+  'phone' => ['nullable','regex:/^[0-9+\s\-]{7,15}$/']
 ], [
     'name.regex' => 'El nombre solo puede contener letras y espacios.',
     'email.unique' => 'El correo electrónico ya está en uso.',
@@ -72,7 +73,9 @@ $validatedData = $request->validate([
     'name' => ['required', 'regex:/^[A-Za-zÀ-ÿ\s]+$/u'],
     'email' => 'required|email|unique:students,email',
     'age' => 'required|integer|min:16|max:100',
-    'course' => 'required|string'
+    'course' => 'required|string',
+    
+  'phone' => ['nullable','regex:/^[0-9+\s\-]{7,15}$/']
 ], [
     'name.regex' => 'El nombre solo puede contener letras y espacios.',
     'email.unique' => 'El correo electrónico ya está en uso.',

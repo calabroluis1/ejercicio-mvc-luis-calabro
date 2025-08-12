@@ -10,7 +10,8 @@ protected $fillable = [
 'name',
 'email',
 'age',
-'course'
+'course',
+'phone'
 ];
 // Método para obtener todos los estudiantes
 // Creado por: [Luis Alejandro Calabro Villalba]
@@ -33,7 +34,8 @@ return [
 'name' => $data['name'] ?? '',
 'email' => $data['email'] ?? '',
 'age' => $data['age'] ?? 0,
-'course' => $data['course'] ?? ''
+'course' => $data['course'] ?? '',
+'phone' => $data['phone'] ?? 0
 ];
 }
 }

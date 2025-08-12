@@ -57,7 +57,11 @@
     <span style="color: red; font-size: 14px;">{{ $message }}</span>
     @enderror
 </div>
-
+<div class="form-group">
+  <label for="phone">Teléfono:</label>
+  <input type="text" id="phone" name="phone" value="{{ old('phone', $student->phone ?? '') }}" placeholder="+595 9xx xxxx" />
+  @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
+</div>
 
     <button type="submit" class="btn">Actualizar Estudiante</button>
 </form>
