@@ -34,17 +34,17 @@
 @enderror
 </div>
 <div class="form-group">
-    <label for="course">Curso:</label>
-    <select id="course" name="course" required>
+    <label for="course_id">Curso:</label>
+    <select id="course_id" name="course_id" required>
         <option value="">-- Seleccione --</option>
-        <option value="1° año" {{ old('course') == '1° año' ? 'selected' : '' }}>1° año</option>
-        <option value="2° año" {{ old('course') == '2° año' ? 'selected' : '' }}>2° año</option>
-        <option value="3° año" {{ old('course') == '3° año' ? 'selected' : '' }}>3° año</option>
-        <option value="4° año" {{ old('course') == '4° año' ? 'selected' : '' }}>4° año</option>
-        <option value="5° año" {{ old('course') == '5° año' ? 'selected' : '' }}>5° año</option>
+        @foreach(App\Models\Course::all() as $course)
+            <option value="{{ $course->id }}" {{ old('course_id', $student->course_id ?? '') == $course->id ? 'selected' : '' }}>
+                {{ $course->name }}
+            </option>
+        @endforeach
     </select>
-    @error('course')
-    <span style="color: red; font-size: 14px;">{{ $message }}</span>
+    @error('course_id')
+        <span style="color:red;">{{ $message }}</span>
     @enderror
 </div>
 <div class="form-group">

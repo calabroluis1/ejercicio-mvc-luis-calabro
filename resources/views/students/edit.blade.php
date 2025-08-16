@@ -1,10 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Editar Estudiante')
-@php
-    $courses = ['1° año', '2° año', '3° año', '4° año', '5° año'];
-    $selectedCourse = old('course', $student->course);
-@endphp
+
 @section('content')
 <a href="{{ route('students.index') }}" class="btn">Volver a la Lista</a>
 
@@ -45,16 +42,18 @@
         @enderror
     </div>
 
-  <div class="form-group">
-    <label for="course">Curso:</label>
-<select id="course" name="course" required>
-    <option value="">-- Seleccione --</option>
-    @foreach($courses as $course)
-        <option value="{{ $course }}" {{ $selectedCourse == $course ? 'selected' : '' }}>{{ $course }}</option>
-    @endforeach
-</select>
-    @error('course')
-    <span style="color: red; font-size: 14px;">{{ $message }}</span>
+<div class="form-group">
+    <label for="course_id">Curso:</label>
+    <select id="course_id" name="course_id" required>
+        <option value="">-- Seleccione --</option>
+        @foreach(App\Models\Course::all() as $course)
+            <option value="{{ $course->id }}" {{ old('course_id', $student->course_id ?? '') == $course->id ? 'selected' : '' }}>
+                {{ $course->name }}
+            </option>
+        @endforeach
+    </select>
+    @error('course_id')
+        <span style="color:red;">{{ $message }}</span>
     @enderror
 </div>
 <div class="form-group">

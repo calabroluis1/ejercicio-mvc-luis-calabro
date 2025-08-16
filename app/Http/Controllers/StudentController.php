@@ -43,21 +43,23 @@ public function destroy($id)
 // Procesar actualización
 public function update(Request $request, $id)
 {
-$validatedData = $request->validate([
-    'name' => ['required', 'regex:/^[A-Za-zÀ-ÿ\s]+$/u'],
-    'email' => [
-        'required',
-        'email',
-        Rule::unique('students', 'email')->ignore($id)
-    ],
-    'age' => 'required|integer|min:16|max:100',
-    'course' => 'required|string',
-  'phone' => ['nullable','regex:/^[0-9+\s\-]{7,15}$/']
-], [
-    'name.regex' => 'El nombre solo puede contener letras y espacios.',
-    'email.unique' => 'El correo electrónico ya está en uso.',
-    'email.email'  => 'Debes ingresar un correo electrónico válido.',
-]);
+    $validatedData = $request->validate([
+        'name' => ['required', 'regex:/^[A-Za-zÀ-ÿ\s]+$/u'],
+        'email' => [
+            'required',
+            'email',
+            Rule::unique('students', 'email')->ignore($id)
+        ],
+        'age' => 'required|integer|min:16|max:100',
+        'course_id' => 'required|exists:courses,id',
+        'phone' => ['nullable','regex:/^[0-9+\s\-]{7,15}$/']
+    ], [
+        'name.regex' => 'El nombre solo puede contener letras y espacios.',
+        'email.unique' => 'El correo electrónico ya está en uso.',
+        'email.email'  => 'Debes ingresar un correo electrónico válido.',
+        'course_id.required' => 'Debes seleccionar un curso válido.',
+        'course_id.exists' => 'El curso seleccionado no existe.'
+    ]);
 
     $student = Student::findOrFail($id);
     $student->update($validatedData);
@@ -69,29 +71,26 @@ $validatedData = $request->validate([
 // Procesar el formulario de creación
 public function store(Request $request)
 {
-$validatedData = $request->validate([
-    'name' => ['required', 'regex:/^[A-Za-zÀ-ÿ\s]+$/u'],
-    'email' => 'required|email|unique:students,email',
-    'age' => 'required|integer|min:16|max:100',
-    'course' => 'required|string',
-    
-  'phone' => ['nullable','regex:/^[0-9+\s\-]{7,15}$/']
-], [
-    'name.regex' => 'El nombre solo puede contener letras y espacios.',
-    'email.unique' => 'El correo electrónico ya está en uso.',
-    'email.email'  => 'Debes ingresar un correo electrónico válido.',
-]);
+    $validatedData = $request->validate([
+        'name' => ['required', 'regex:/^[A-Za-zÀ-ÿ\s]+$/u'],
+        'email' => 'required|email|unique:students,email',
+        'age' => 'required|integer|min:16|max:100',
+        'course_id' => 'required|exists:courses,id',
+        'phone' => ['nullable','regex:/^[0-9+\s\-]{7,15}$/']
+    ], [
+        'name.regex' => 'El nombre solo puede contener letras y espacios.',
+        'email.unique' => 'El correo electrónico ya está en uso.',
+        'email.email'  => 'Debes ingresar un correo electrónico válido.',
+        'course_id.required' => 'Debes seleccionar un curso válido.',
+        'course_id.exists' => 'El curso seleccionado no existe.'
+    ]);
 
-//dd($validatedData);
-//el dd sirve para debugear y ver los datos mandados a la bd
+    Student::create($validatedData);
 
-
-// El controlador solicita al modelo crear el estudiante
-Student::create($validatedData);
-// El controlador redirige con mensaje de éxito
-return redirect()->route('students.index')
-->with('success', 'Estudiante creado exitosamente');
+    return redirect()->route('students.index')
+                     ->with('success', 'Estudiante creado exitosamente');
 }
+
 // Mostrar detalles de un estudiante específico
 public function show($id)
 {

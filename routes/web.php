@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\CourseController;
 // Ruta principal - redirigir a estudiantes
 Route::get('/', function () {
 return redirect()->route('students.index');
@@ -13,3 +14,8 @@ Route::get('/students/{id}', [StudentController::class, 'show'])->name('students
 Route::get('/students/{id}/edit', [StudentController::class, 'edit'])->name('students.edit');
 Route::put('/students/{id}', [StudentController::class, 'update'])->name('students.update');
 Route::resource('students', StudentController::class);
+
+
+
+
+Route::resource('courses', CourseController::class);

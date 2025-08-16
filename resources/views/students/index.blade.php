@@ -3,6 +3,8 @@
 @section('content')
 <div style="margin-bottom: 20px;">
 <a href="{{ route('students.create') }}" class="btn">Agregar Nuevo Estudiante</a>
+<a href="{{ route('courses.index') }}" class="btn btn-secondary mb-3">Ir a Cursos</a>
+
 </div>
 @if($students->count() > 0)
 <table>
@@ -25,7 +27,7 @@
 <td>{{ $student->name }}</td>
 <td>{{ $student->email }}</td>
 <td>{{ $student->age }}</td>
-<td>{{ $student->course }}</td>
+<td>{{ $student->course->name ?? 'Sin curso' }}</td>
 <td>{{ $student->phone }}</td>
 <td>
   <div class="action-buttons">

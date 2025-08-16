@@ -1,0 +1,23 @@
+Nombre completo: Luis Alejandro Calabro Vilallba
+
+Cédula: 5.676.401
+
+Fecha de inicio: los dias  12-08-2025    ,15-08-2025    ,16-08-2025 .
+
+Tiempo invertido: total 4 a 5 horas 
+
+Mayor dificultad:
+validaciones regex,
+olvidarme de que laragon tiene su propia licencia,
+volver a instalar mysql,
+migraciones en la base de datos,
+solamente tuve esas dificultades.
+
+
+Modificación personal:
+respecto al ejercicio o proyecto principal,
+lo unico que hice fue añadir una tabla mas como lo pedia el ejercicio llamada cursos,
+que se relaciona por id con la tabla de studiantes,
+y eso,
+podria pensar en hacer una jerarquia para los cursos y año de cursos,
+pero creo que esto cumple con las indicaciones requeridas. 

@@ -7,12 +7,13 @@ class Student extends Model
 use HasFactory;
 // Especificar los campos que pueden ser asignados masivamente
 protected $fillable = [
-'name',
-'email',
-'age',
-'course',
-'phone'
+    'name',
+    'email',
+    'age',
+    'phone',
+    'course_id'
 ];
+
 // Método para obtener todos los estudiantes
 // Creado por: [Luis Alejandro Calabro Villalba]
 // Fecha: [8-11-2025]
@@ -26,16 +27,22 @@ public static function findStudent($id)
 {
 return self::find($id);
 }
+
+public function course()
+{
+    return $this->belongsTo(Course::class);
+}
+
 // Método para validar datos de estudiante
 // Creado por: [Luis Alejandro Calabro Villalba]
 public function validateStudentData($data)
 {
-return [
-'name' => $data['name'] ?? '',
-'email' => $data['email'] ?? '',
-'age' => $data['age'] ?? 0,
-'course' => $data['course'] ?? '',
-'phone' => $data['phone'] ?? 0
-];
+  return [
+        'name' => $data['name'] ?? '',
+        'email' => $data['email'] ?? '',
+        'age' => $data['age'] ?? 0,
+        'course_id' => $data['course_id'] ?? null,
+        'phone' => $data['phone'] ?? ''
+    ];
 }
 }

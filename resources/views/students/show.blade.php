@@ -8,7 +8,7 @@
 <p><strong>Nombre:</strong> {{ $student->name }}</p>
 <p><strong>Email:</strong> {{ $student->email }}</p>
 <p><strong>Edad:</strong> {{ $student->age }} años</p>
-<p><strong>Curso:</strong> {{ $student->course }}</p>
+<p><strong>Curso:</strong> {{ $student->course->name }}</p>
 <p><strong>Telefono:</strong> {{ $student->phone }}</p>
 <p><strong>Fecha de registro:</strong> {{ $student->created_at->format('d/m/Y H:i') }}</p>
 @if($student->updated_at != $student->created_at)
@@ -16,3 +16,5 @@
 @endif
 </div>
 @endsection
+
+
