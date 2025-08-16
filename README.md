@@ -1,77 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center">
+    <a href="https://laravel.com" target="_blank">
+        <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+    </a>
+</p>
 
-## Proyecto: ejercicio-mvc-calabro-luis
+# 📌 Proyecto Final: Ejercicio MVC - Luis Calabro
 
-Proyecto práctico para afianzar el patrón MVC usando Laravel.  
-Base de datos personalizada: ejercicio_mvc_calabro_luis
+Este proyecto fue desarrollado en **Laravel** con el objetivo de reforzar y aplicar el patrón **Modelo-Vista-Controlador (MVC)**, implementando operaciones CRUD completas, validaciones personalizadas y gestión de relaciones entre entidades.
 
----
-
-## Qué hemos hecho hasta ahora
-
-### PARTE 5: ACTIVIDADES DE REFUERZO
-
-#### 5.1 Ejercicios prácticos realizados
-
-- **Ejercicio 1: Agregar funcionalidad de edición**
-  - Agregamos los métodos `edit` y `update` en el controlador `StudentController`.
-  - Creamos la vista `edit.blade.php`.
-  - Añadimos las rutas correspondientes para editar estudiantes.
-  - Implementamos el botón "Editar" en la lista de estudiantes.
-
-- **Ejercicio 2: Implementar eliminación**
-  - Agregamos el método `destroy` en el controlador.
-  - Creamos una confirmación dinámica usando modal JavaScript para eliminar.
-  - Añadimos el botón "Eliminar" con confirmación en la lista de estudiantes.
+Base de datos utilizada: `ejercicio_mvc_calabro_luis`.
 
 ---
 
-## Qué falta hacer
+## 🚀 Características principales
 
-- **Ejercicio 3: Añadir campo adicional**
-  - Crear migración para agregar el campo "teléfono" en la tabla estudiantes.
-  - Actualizar el modelo, controlador y vistas para manejar el nuevo campo.
-  - Agregar validación para el campo "teléfono".
-
----
-
-## Próximos pasos y reflexiones
-
-- Completar el Ejercicio 3.
-- Responder preguntas de reflexión sobre MVC y buenas prácticas.
-- Realizar desafío adicional: Gestión de Cursos con CRUD completo y relaciones.
-- Preparar entregables con personalización, capturas, y documento reflexivo.
+- CRUD completo para **Estudiantes** y **Cursos**.
+- Validaciones personalizadas en español.
+- Confirmaciones con **modales dinámicos** para eliminación.
+- Gestión de relaciones entre Estudiantes y Cursos.
+- Diseño de vistas con **Blade Templates**.
+- Migraciones y modelos totalmente configurados.
+- Arquitectura limpia siguiendo buenas prácticas de Laravel.
 
 ---
 
-## Sobre el proyecto
+## 🛠 Tecnologías utilizadas
 
-Este proyecto tiene como objetivo fortalecer la comprensión y aplicación del patrón Modelo-Vista-Controlador (MVC) en Laravel, implementando funcionalidades básicas CRUD con buenas prácticas y separación de responsabilidades.
-
----
-
-## Documentación y recursos
-
-- [Documentación oficial Laravel](https://laravel.com/docs)
-- [Laravel Blade Templates](https://laravel.com/docs/blade)
-- [GitHub del proyecto](https://github.com/calabroluis1/ejercicio-mvc-luis-calabro)
+- [Laravel 10](https://laravel.com/docs)
+- PHP 8+
+- MySQL
+- Composer
+- Blade Templates
+- JavaScript (modales y validaciones dinámicas)
+- Bootstrap 5
 
 ---
 
-**Luis Calabro**  
-Fecha de inicio: 11/08/2025  
-Tiempo invertido: 1  
+## 📥 Instalación y configuración
+
+### 1️⃣ Clonar el repositorio
+```bash
+git clone https://github.com/calabroluis1/ejercicio-mvc-luis-calabro.git
+cd ejercicio-mvc-luis-calabro
+```
+
+## 2️⃣ Instalar dependencias
+```
+composer install
+npm install && npm run dev
+```
+
+## 3️⃣ Configurar entorno
+```
+cp .env.example .env  # Linux / macOS
+copy .env.example .env  # Windows
+php artisan key:generate
+```
+> Configurar la base de datos en el archivo `.env`.
+
+## 4️⃣ Migrar base de datos
+```
+php artisan migrate --seed
+```
+
+## 5️⃣ Iniciar servidor
+```
+php artisan serve
+```
+Abrir en el navegador:  
+[http://localhost:8000](http://localhost:8000)
 
 ---
 
-### Comentarios personales y modificaciones
-
-- Se personalizó el proyecto y base de datos con nombre propio para cumplir criterios.
-- Se implementaron validaciones con mensajes personalizados en español.
-- Se mejoró la experiencia de usuario con modales para confirmación en eliminación.
-- Pendiente agregar mejoras para validación del nuevo campo "teléfono" y nuevo módulo Cursos.
+## 📚 Recursos utilizados
+- [Laravel Documentation](https://laravel.com/docs)
+- [Blade Templates](https://laravel.com/docs/blade)
+- MySQL
+- Composer & NPM
 
 ---
 
-*Este README se actualizará conforme avance el proyecto.*
+## 📅 Datos del proyecto
+- **Autor:** Luis Calabro  
+- **Fecha de inicio:** 11/08/2025  
+- **Fecha de finalización:** 15/08/2025  
+- **Tiempo invertido:** 5 días
 
+---
+
+## 💬 Comentarios finales
+Este proyecto me permitió:
+- Reforzar conceptos de MVC en Laravel.
+- Aplicar validaciones y mensajes personalizados.
+- Implementar relaciones entre entidades.
+- Mejorar la experiencia de usuario con modales y confirmaciones.
+
+---
+
+**Versión final — Proyecto completado y documentado para entrega.**
