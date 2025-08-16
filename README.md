@@ -57,13 +57,9 @@ copy .env.example .env  # Windows
 php artisan key:generate
 ```
 > Configurar la base de datos en el archivo `.env`.
+ejercicio-mvc-luis-calabro este es el nombre de la bd utilizada dentro del propio repositorio podras encontrarle como un backup.
 
-## 4️⃣ Migrar base de datos
-```
-php artisan migrate --seed
-```
-
-## 5️⃣ Iniciar servidor
+## 4️⃣  Iniciar servidor
 ```
 php artisan serve
 ```
